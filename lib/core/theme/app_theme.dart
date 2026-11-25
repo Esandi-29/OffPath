@@ -53,6 +53,29 @@ abstract final class AppTheme {
     return base.copyWith(
       scaffoldBackgroundColor: page,
       textTheme: _textTheme(base.textTheme),
+      filledButtonTheme: FilledButtonThemeData(
+        style: FilledButton.styleFrom(
+          minimumSize: const Size(64, 52),
+          shape: const StadiumBorder(),
+          textStyle: const TextStyle(
+            fontFamily: 'PlusJakartaSans',
+            fontWeight: FontWeight.w700,
+            fontSize: 16,
+          ),
+        ),
+      ),
+      outlinedButtonTheme: OutlinedButtonThemeData(
+        style: OutlinedButton.styleFrom(
+          minimumSize: const Size(64, 52),
+          shape: const StadiumBorder(),
+          side: BorderSide(color: scheme.outlineVariant),
+          textStyle: const TextStyle(
+            fontFamily: 'PlusJakartaSans',
+            fontWeight: FontWeight.w700,
+            fontSize: 16,
+          ),
+        ),
+      ),
       extensions: [extra],
     );
   }
