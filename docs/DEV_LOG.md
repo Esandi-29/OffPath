@@ -1,0 +1,12 @@
+# OffPath – Development log
+
+Issues found and notable decisions, with fixes. Used for the report's "Issues/errors and fixes" section.
+
+| ID | Date | Area | Problem / decision | Cause | Fix / outcome |
+|---|---|---|---|---|---|
+| DL-01 | 25 Nov 2026 | Git | First two "commits" (project creation, Firebase) never reached GitHub; repo only had the README | Android Studio leaves new (unversioned) files unticked in the Commit window, so nothing was committed | Grouped changes by directory and committed in two parts (project files; Firebase + packages + fonts). Now check the file counter before every commit |
+| DL-02 | 25 Nov 2026 | Emulator | "No macOS desktop project configured"; emulator would not open a second time; slow rendering | Device dropdown defaulted to macOS (desktop); the AVD was already running; Privacy Sandbox image forces software rendering on an 8 GB Mac | Selected the running Android emulator; use the Android 14 (API 34) emulator for faster builds |
+| DL-03 | 25 Nov 2026 | Firebase | `flutterfire configure` found 0 Firebase projects | Firebase CLI was logged in with a different Google account from the project owner | `firebase logout` + `firebase login` with the owner account; project then found |
+| DL-04 | 25 Nov 2026 | Firebase | `flutterfire configure` crashed: cannot load such file -- xcodeproj | iOS configuration needs the Ruby gem `xcodeproj`, not installed | Configured Android only (`--platforms=android`); the deliverable is an Android APK |
+| DL-05 | 25 Nov 2026 | Design | Colour roles: palette colours used as fills with dark text | Yellows, greens, limes and blues fail WCAG contrast as text on white | Category colours are fills behind dark text (#111114, ≥ 5:1); purple #6255D2 is the light primary (5.6:1 with white), #8587F8 the dark primary (6.8:1 with black) |
+| DL-06 | 25 Nov 2026 | Security | GitHub secret scanning flagged two "Google API Keys" (lib/firebase_options.dart, ios/Runner/GoogleService-Info.plist) | The scanner detects any string shaped like a Google API key. These are Firebase client configuration keys, which identify the project and are shipped inside every app build; they are not secrets | Alerts closed as false positives. Data is protected by Firestore security rules (task 2.4) and Firebase Authentication, not by hiding the key. Optional hardening: restrict the key to the Android app in Google Cloud Console |
