@@ -1,0 +1,957 @@
+{
+  "version": 1,
+  "categories": [
+    {
+      "id": "nature",
+      "name": "Nature"
+    },
+    {
+      "id": "culture",
+      "name": "Culture"
+    },
+    {
+      "id": "food",
+      "name": "Food"
+    },
+    {
+      "id": "adventure",
+      "name": "Adventure"
+    }
+  ],
+  "collections": [
+    {
+      "id": "underrated-nature",
+      "name": "Underrated nature"
+    },
+    {
+      "id": "remote-escapes",
+      "name": "Remote escapes"
+    },
+    {
+      "id": "cultural-heritage",
+      "name": "Cultural heritage"
+    },
+    {
+      "id": "hidden-villages",
+      "name": "Hidden villages"
+    },
+    {
+      "id": "local-food",
+      "name": "Local food"
+    }
+  ],
+  "destinations": [
+    {
+      "id": "lencois-maranhenses",
+      "name": "Lençóis Maranhenses",
+      "country": "Brazil",
+      "region": "Maranhão",
+      "continent": "South America",
+      "location": {
+        "lat": -2.5333,
+        "lng": -43.1167
+      },
+      "categories": [
+        "nature",
+        "adventure"
+      ],
+      "collections": [
+        "underrated-nature"
+      ],
+      "featured": true,
+      "shortDescription": "A vast landscape of white dunes and seasonal turquoise lagoons that transform with the rhythm of the rains.",
+      "overview": "Lençóis Maranhenses National Park is a striking coastal landscape of rolling white sand dunes interrupted by freshwater lagoons. The lagoons form during the rainy season and create a remarkable contrast between sand, water and sky.",
+      "whyHiddenGem": "Despite its extraordinary scenery, the park sees far fewer international visitors than Brazil's famous beaches or Iguaçu Falls, and its vast landscape and small gateway villages offer experiences far removed from conventional resort tourism.",
+      "travelInfo": {
+        "bestTime": "May–September, especially June–August for lagoons",
+        "gettingThere": "Fly to São Luís (SLZ), then transfer to Barreirinhas or Santo Amaro",
+        "language": "Portuguese",
+        "currency": "Brazilian Real (BRL)"
+      },
+      "photo": {
+        "file": "Lençóis Maranhenses 2018.jpg",
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Len%C3%A7%C3%B3is_Maranhenses_2018.jpg?width=1280",
+        "author": "Julius Dadalti",
+        "licence": "CC BY-SA 4.0"
+      },
+      "experiences": [
+        {
+          "id": "lagoon-hopping",
+          "title": "Lagoon hopping across the dunes",
+          "category": "adventure",
+          "duration": "3–5 hours",
+          "description": "Explore the dune landscape with a local guide and swim in seasonal freshwater lagoons.",
+          "photo": {
+            "file": "Lençóis Maranhenses (Pôr do Sol).jpg",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Len%C3%A7%C3%B3is_Maranhenses_%28P%C3%B4r_do_Sol%29.jpg?width=1280",
+            "author": "Alex Yeghiaian",
+            "licence": "CC BY-SA 4.0"
+          }
+        },
+        {
+          "id": "sunset-sand-sea",
+          "title": "Sunset over the sand sea",
+          "category": "nature",
+          "duration": "2–3 hours",
+          "description": "Walk across the dunes during late afternoon and watch the shadows stretch across the landscape.",
+          "photo": {
+            "file": "Lençóis Maranhenses Roberto Silva 20.jpg",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Len%C3%A7%C3%B3is_Maranhenses_Roberto_Silva_20.jpg?width=1280",
+            "author": "Rocsilva",
+            "licence": "CC BY-SA 4.0"
+          }
+        },
+        {
+          "id": "atins-village",
+          "title": "Explore Atins village",
+          "category": "culture",
+          "duration": "Overnight",
+          "description": "Stay in a small coastal village near the park and experience its relaxed atmosphere.",
+          "photo": {
+            "file": "Atins - Maranhão 2.jpg",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Atins_-_Maranh%C3%A3o_2.jpg?width=1280",
+            "author": "Mayra Pavanello Munerato",
+            "licence": "CC BY-SA 3.0"
+          }
+        }
+      ],
+      "sortOrder": 1
+    },
+    {
+      "id": "lake-bohinj",
+      "name": "Lake Bohinj",
+      "country": "Slovenia",
+      "region": "Upper Carniola",
+      "continent": "Europe",
+      "location": {
+        "lat": 46.28,
+        "lng": 13.87
+      },
+      "categories": [
+        "nature",
+        "adventure"
+      ],
+      "collections": [
+        "underrated-nature"
+      ],
+      "featured": true,
+      "shortDescription": "A peaceful alpine lake surrounded by forests, mountain peaks and traditional Slovenian villages.",
+      "overview": "Lake Bohinj lies within the Julian Alps and forms part of Triglav National Park. Its clear waters, surrounding mountains and quieter atmosphere offer an alternative to Slovenia's more heavily visited Lake Bled.",
+      "whyHiddenGem": "Bohinj retains a more nature-focused and relaxed atmosphere, with opportunities to explore the lake, mountain trails and nearby villages.",
+      "travelInfo": {
+        "bestTime": "May–October; winter for snow activities",
+        "gettingThere": "Bus from Ljubljana to Bohinj or Bohinjska Bistrica",
+        "language": "Slovenian",
+        "currency": "Euro (EUR)"
+      },
+      "photo": {
+        "file": "Bohinjsko jezero 2.jpg",
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bohinjsko_jezero_2.jpg?width=1280",
+        "author": "Smihael",
+        "licence": "CC BY-SA 3.0"
+      },
+      "experiences": [
+        {
+          "id": "paddle-bohinj",
+          "title": "Paddle across Lake Bohinj",
+          "category": "adventure",
+          "duration": "2–3 hours",
+          "description": "Kayak or paddleboard across the lake while taking in views of the Julian Alps.",
+          "photo": {
+            "file": "Kayaking on Lake Bohinj, 2026.jpg",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kayaking_on_Lake_Bohinj%2C_2026.jpg?width=1280",
+            "author": "Thomas Dahlstrøm Nielsen",
+            "licence": "CC BY 4.0"
+          }
+        },
+        {
+          "id": "savica-waterfall",
+          "title": "Hike to Savica Waterfall",
+          "category": "nature",
+          "duration": "2–3 hours",
+          "description": "Follow a woodland trail and staircase to one of the region's best-known waterfalls.",
+          "photo": {
+            "file": "Savica Fall.jpg",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Savica_Fall.jpg?width=1280",
+            "author": "Tiia Monto",
+            "licence": "CC BY-SA 3.0"
+          }
+        },
+        {
+          "id": "alpine-village-life",
+          "title": "Discover alpine village life",
+          "category": "culture",
+          "duration": "2–3 hours",
+          "description": "Explore traditional villages around the lake, local architecture and small family-run food businesses.",
+          "photo": {
+            "file": "Stara Fužina - Planina v Lazu 1.jpg",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stara_Fu%C5%BEina_-_Planina_v_Lazu_1.jpg?width=1280",
+            "author": "Matijap",
+            "licence": "CC BY-SA 3.0"
+          }
+        }
+      ],
+      "sortOrder": 2
+    },
+    {
+      "id": "narangala",
+      "name": "Narangala",
+      "country": "Sri Lanka",
+      "region": "Uva Province",
+      "continent": "Asia",
+      "location": {
+        "lat": 7.018,
+        "lng": 81.063
+      },
+      "categories": [
+        "nature",
+        "adventure"
+      ],
+      "collections": [
+        "remote-escapes"
+      ],
+      "featured": true,
+      "shortDescription": "A dramatic mountain viewpoint where rolling grasslands and misty valleys meet spectacular sunrise views.",
+      "overview": "Narangala is a mountain in Sri Lanka's Uva region known for its distinctive ridge and panoramic views. Its open grassland slopes, which turn golden in the dry months, and elevated summit attract hikers seeking a less commercialised mountain experience.",
+      "whyHiddenGem": "It offers dramatic mountain scenery away from Sri Lanka's better-known trekking destinations, with a distinctly local trekking atmosphere.",
+      "travelInfo": {
+        "bestTime": "February–September; heavier rain usually October–December",
+        "gettingThere": "Travel to Badulla or Bandarawela and continue by local transport towards trail access",
+        "language": "Sinhala, Tamil",
+        "currency": "Sri Lankan Rupee (LKR)"
+      },
+      "photo": {
+        "file": "Hikers in Narangala Sri Lanka.jpg",
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hikers_in_Narangala_Sri_Lanka.jpg?width=1280",
+        "author": "Ahamed rasheed",
+        "licence": "CC BY-SA 4.0"
+      },
+      "experiences": [
+        {
+          "id": "summit-sunrise",
+          "title": "Summit sunrise hike",
+          "category": "adventure",
+          "duration": "3–5 hours",
+          "description": "Trek towards the summit before sunrise to experience panoramic views and changing morning light.",
+          "photo": {
+            "file": "The Warm Sun Rays falling on Wildflower.png",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Warm_Sun_Rays_falling_on_Wildflower.png?width=1280",
+            "author": "Tharukaprabhashana",
+            "licence": "CC BY-SA 4.0"
+          }
+        },
+        {
+          "id": "mountain-ridge",
+          "title": "Explore the mountain ridge",
+          "category": "nature",
+          "duration": "2–4 hours",
+          "description": "Explore the ridge and grasslands while enjoying views of valleys and neighbouring ranges.",
+          "photo": {
+            "file": "Hikers in Narangala Sri Lanka.jpg",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hikers_in_Narangala_Sri_Lanka.jpg?width=1280",
+            "author": "Ahamed rasheed",
+            "licence": "CC BY-SA 4.0"
+          }
+        },
+        {
+          "id": "uva-tea-estate",
+          "title": "Walk an Uva tea estate",
+          "category": "culture",
+          "duration": "3–4 hours",
+          "description": "Walk through a working tea estate in the Uva hills near Badulla and see how the region's well-known tea is grown and processed.",
+          "photo": {
+            "file": "Badulla tea estate.jpg",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Badulla_tea_estate.jpg?width=1280",
+            "author": "Vithushan23895",
+            "licence": "CC BY-SA 4.0"
+          }
+        }
+      ],
+      "sortOrder": 3
+    },
+    {
+      "id": "chitkul",
+      "name": "Chitkul",
+      "country": "India",
+      "region": "Kinnaur, Himachal Pradesh",
+      "continent": "Asia",
+      "location": {
+        "lat": 31.35,
+        "lng": 78.44
+      },
+      "categories": [
+        "nature",
+        "culture"
+      ],
+      "collections": [
+        "hidden-villages"
+      ],
+      "featured": false,
+      "shortDescription": "A remote Himalayan village surrounded by snow-capped peaks, the Baspa River and traditional mountain architecture.",
+      "overview": "Chitkul is a village in the Kinnaur district of Himachal Pradesh, near the Indo-Tibetan border. Its traditional wooden homes, mountain scenery and location along the Baspa Valley make it a distinctive Himalayan destination.",
+      "whyHiddenGem": "Its remote location and slower pace of life make it appealing to travellers looking beyond more commercial Himalayan tourist towns.",
+      "travelInfo": {
+        "bestTime": "May–October",
+        "gettingThere": "Travel to Sangla by road and continue to Chitkul",
+        "language": "Hindi, Kinnauri (English in tourist services)",
+        "currency": "Indian Rupee (INR)"
+      },
+      "photo": {
+        "file": "Temple at Chitkul.JPG",
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Temple_at_Chitkul.JPG?width=1280",
+        "author": "Kaiho",
+        "licence": "CC BY-SA 3.0"
+      },
+      "experiences": [
+        {
+          "id": "chitkul-village-walk",
+          "title": "Walk through Chitkul village",
+          "category": "culture",
+          "duration": "1–2 hours",
+          "description": "Walk through the village to observe traditional wooden architecture and everyday life.",
+          "photo": {
+            "file": "Traditional house in Chitkul.jpg",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Traditional_house_in_Chitkul.jpg?width=1280",
+            "author": "Marsmux",
+            "licence": "CC BY-SA 4.0"
+          }
+        },
+        {
+          "id": "baspa-riverside",
+          "title": "Baspa riverside walk",
+          "category": "nature",
+          "duration": "2–3 hours",
+          "description": "Follow accessible riverside areas and enjoy views of the Baspa River and valley.",
+          "photo": {
+            "file": "Baspa River flowing next to Chitkul.jpg",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Baspa_River_flowing_next_to_Chitkul.jpg?width=1280",
+            "author": "Sanyam Bahga",
+            "licence": "CC BY-SA 3.0"
+          }
+        },
+        {
+          "id": "valley-trails",
+          "title": "Explore the valley trails",
+          "category": "adventure",
+          "duration": "3–5 hours",
+          "description": "Walk up the Baspa Valley beyond the village towards Nagasti, the last outpost before the Indo-Tibetan border, depending on weather.",
+          "photo": {
+            "file": "Baspa Valley at Sangla, Himachal Pradesh, India.jpg",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Baspa_Valley_at_Sangla%2C_Himachal_Pradesh%2C_India.jpg?width=1280",
+            "author": "UnpetitproleX",
+            "licence": "CC BY-SA 4.0"
+          }
+        }
+      ],
+      "sortOrder": 4
+    },
+    {
+      "id": "lake-khovsgol",
+      "name": "Lake Khövsgöl",
+      "country": "Mongolia",
+      "region": "Khövsgöl Province",
+      "continent": "Asia",
+      "location": {
+        "lat": 51.0,
+        "lng": 100.75
+      },
+      "categories": [
+        "nature",
+        "adventure"
+      ],
+      "collections": [
+        "remote-escapes"
+      ],
+      "featured": false,
+      "shortDescription": "A vast alpine lake surrounded by forested mountains and remote Mongolian wilderness.",
+      "overview": "Lake Khövsgöl is Mongolia's largest freshwater lake and lies near the country's northern border. Its clear waters, taiga forests and mountainous terrain provide opportunities for wildlife observation and outdoor exploration.",
+      "whyHiddenGem": "The lake's remote setting offers a sense of wilderness and solitude rarely found at more accessible lakeside destinations.",
+      "travelInfo": {
+        "bestTime": "June–September",
+        "gettingThere": "Fly to Mörön, then travel by road to Khatgal, on the southern shore",
+        "language": "Mongolian",
+        "currency": "Mongolian Tugrik (MNT)"
+      },
+      "photo": {
+        "file": "Lake Khövsgöl, Mongolia.jpg",
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake_Kh%C3%B6vsg%C3%B6l%2C_Mongolia.jpg?width=1280",
+        "author": "Bernard Gagnon",
+        "licence": "CC0"
+      },
+      "experiences": [
+        {
+          "id": "kayak-khovsgol",
+          "title": "Kayak across the lake",
+          "category": "adventure",
+          "duration": "2–3 hours",
+          "description": "Explore the clear waters of Lake Khövsgöl by kayak and enjoy mountain scenery.",
+          "photo": {
+            "file": "Lake Khövsgöl9.JPG",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake_Kh%C3%B6vsg%C3%B6l9.JPG?width=1280",
+            "author": "Arabsalam",
+            "licence": "CC BY-SA 4.0"
+          }
+        },
+        {
+          "id": "taiga-forest",
+          "title": "Taiga forest exploration",
+          "category": "nature",
+          "duration": "3–4 hours",
+          "description": "Take a guided walk through forests surrounding the lake.",
+          "photo": {
+            "file": "KhovsgolNuur.jpg",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/KhovsgolNuur.jpg?width=1280",
+            "author": "Doron",
+            "licence": "CC BY-SA 3.0"
+          }
+        },
+        {
+          "id": "ger-camp",
+          "title": "Stay with a lakeside ger camp",
+          "category": "culture",
+          "duration": "Overnight",
+          "description": "Spend a night in a traditional ger-based camp and experience local hospitality.",
+          "photo": {
+            "file": "Alag Tsar Tourist Camp 01.jpg",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alag_Tsar_Tourist_Camp_01.jpg?width=1280",
+            "author": "Bernard Gagnon",
+            "licence": "CC0"
+          }
+        }
+      ],
+      "sortOrder": 5
+    },
+    {
+      "id": "tsingy-de-bemaraha",
+      "name": "Tsingy de Bemaraha",
+      "country": "Madagascar",
+      "region": "Melaky Region",
+      "continent": "Africa",
+      "location": {
+        "lat": -18.75,
+        "lng": 44.75
+      },
+      "categories": [
+        "nature",
+        "adventure"
+      ],
+      "collections": [
+        "remote-escapes"
+      ],
+      "featured": false,
+      "shortDescription": "A surreal limestone forest of sharp pinnacles, narrow passages, suspension bridges and hidden caves.",
+      "overview": "Tsingy de Bemaraha National Park protects an extraordinary limestone karst landscape in western Madagascar. Its formations, caves and isolated habitats support distinctive wildlife and guided trekking experiences.",
+      "whyHiddenGem": "The difficult access and remote location preserve an adventurous atmosphere and make the landscape feel unlike a conventional nature destination.",
+      "travelInfo": {
+        "bestTime": "May–October, especially June–September; the park usually closes in the rainy season (roughly November–April)",
+        "gettingThere": "Travel from Morondava to Bekopaka using 4x4 transport and river crossings",
+        "language": "Malagasy, French",
+        "currency": "Malagasy Ariary (MGA)"
+      },
+      "photo": {
+        "file": "Tsingy de Bemaraha Strict Nature Reserve.jpg",
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tsingy_de_Bemaraha_Strict_Nature_Reserve.jpg?width=1280",
+        "author": "ASMaloney at English Wikipedia",
+        "licence": "Public domain"
+      },
+      "experiences": [
+        {
+          "id": "grand-tsingy",
+          "title": "Grand Tsingy guided circuit",
+          "category": "adventure",
+          "duration": "4–6 hours",
+          "description": "Explore dramatic limestone formations on a guided circuit with elevated passages and bridges.",
+          "photo": {
+            "file": "Grand Tsingy 08.JPG",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grand_Tsingy_08.JPG?width=1280",
+            "author": "Heinonlein",
+            "licence": "CC BY-SA 4.0"
+          }
+        },
+        {
+          "id": "petit-tsingy",
+          "title": "Petit Tsingy exploration",
+          "category": "nature",
+          "duration": "2–3 hours",
+          "description": "Experience a shorter guided route through limestone formations, caves and karst landscape.",
+          "photo": {
+            "file": "Petit Tsingy, Morondava, Madagascar.jpg",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Petit_Tsingy%2C_Morondava%2C_Madagascar.jpg?width=1280",
+            "author": "Cactus0625",
+            "licence": "CC BY-SA 4.0"
+          }
+        },
+        {
+          "id": "manambolo-boat",
+          "title": "Manambolo Gorge boat trip",
+          "category": "nature",
+          "duration": "2–3 hours",
+          "description": "Travel along the Manambolo River through limestone gorges.",
+          "photo": {
+            "file": "Ansicht, Manambolo River bei Sonnenaufgang.jpg",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ansicht%2C_Manambolo_River_bei_Sonnenaufgang.jpg?width=1280",
+            "author": "Rod Waddington",
+            "licence": "CC BY-SA 2.0"
+          }
+        }
+      ],
+      "sortOrder": 6
+    },
+    {
+      "id": "gjirokaster",
+      "name": "Gjirokastër",
+      "country": "Albania",
+      "region": "Gjirokastër County",
+      "continent": "Europe",
+      "location": {
+        "lat": 40.075,
+        "lng": 20.138
+      },
+      "categories": [
+        "culture",
+        "food"
+      ],
+      "collections": [
+        "cultural-heritage"
+      ],
+      "featured": true,
+      "shortDescription": "A historic hillside town of stone-roofed houses, cobbled streets and traditional Albanian cuisine.",
+      "overview": "Gjirokastër is a historic town in southern Albania recognised for its distinctive Ottoman-era architecture and stone-built homes. Its castle, bazaar streets and hillside setting create a layered cultural experience.",
+      "whyHiddenGem": "A UNESCO World Heritage town, Gjirokastër sees far fewer visitors than better-known Mediterranean old towns such as Dubrovnik, yet offers an immersive historic atmosphere with artisan traditions, local food and architecture.",
+      "travelInfo": {
+        "bestTime": "April–June and September–October",
+        "gettingThere": "Bus or minibus from Tirana or Sarandë",
+        "language": "Albanian",
+        "currency": "Albanian Lek (ALL)"
+      },
+      "photo": {
+        "file": "Gjirokastër Old Town (2).jpg",
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gjirokast%C3%ABr_Old_Town_%282%29.jpg?width=1280",
+        "author": "Radosław Botev",
+        "licence": "CC BY 3.0 PL"
+      },
+      "experiences": [
+        {
+          "id": "gjirokaster-castle",
+          "title": "Explore Gjirokastër Castle",
+          "category": "culture",
+          "duration": "2–3 hours",
+          "description": "Explore the historic castle overlooking the town and discover its architecture and panoramic views.",
+          "photo": {
+            "file": "Gjirokastër Castle (by Pudelek) 3.jpg",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gjirokast%C3%ABr_Castle_%28by_Pudelek%29_3.jpg?width=1280",
+            "author": "Pudelek",
+            "licence": "CC BY-SA 4.0"
+          }
+        },
+        {
+          "id": "old-bazaar",
+          "title": "Walk the old bazaar",
+          "category": "culture",
+          "duration": "1–2 hours",
+          "description": "Wander through traditional bazaar streets and artisan shops.",
+          "photo": {
+            "file": "Gjirokastër Mosque - Mosques in Albania.jpg",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gjirokast%C3%ABr_Mosque_-_Mosques_in_Albania.jpg?width=1280",
+            "author": "Marcos Escudero Olano",
+            "licence": "CC BY-SA 2.0"
+          }
+        },
+        {
+          "id": "gjirokaster-food",
+          "title": "Taste Gjirokastër's traditional food",
+          "category": "food",
+          "duration": "1–2 hours",
+          "description": "Discover local dishes such as qifqi alongside regional cheeses and specialties.",
+          "photo": {
+            "file": "Albanian Meat Pie - Mish me Byrek.jpg",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Albanian_Meat_Pie_-_Mish_me_Byrek.jpg?width=1280",
+            "author": "Myalbanianfood",
+            "licence": "CC BY-SA 4.0"
+          }
+        }
+      ],
+      "sortOrder": 7
+    },
+    {
+      "id": "mardin",
+      "name": "Mardin",
+      "country": "Türkiye",
+      "region": "Southeastern Anatolia",
+      "continent": "Asia",
+      "location": {
+        "lat": 37.313,
+        "lng": 40.735
+      },
+      "categories": [
+        "culture",
+        "food"
+      ],
+      "collections": [
+        "local-food"
+      ],
+      "featured": false,
+      "shortDescription": "A hillside city of honey-coloured stone buildings, ancient religious landmarks and rich culinary traditions.",
+      "overview": "Mardin sits on a hillside overlooking the Mesopotamian plains and is known for its distinctive stone architecture. The city reflects a blend of Syriac Christian, Kurdish, Arab and Turkish traditions.",
+      "whyHiddenGem": "Its location in Türkiye's far southeast, near the Syrian border and well away from the usual Istanbul–Cappadocia–coast route, means few international travellers reach it, so its architecture, crafts and regional food traditions remain largely uncrowded.",
+      "travelInfo": {
+        "bestTime": "March–May and September–November",
+        "gettingThere": "Fly to Mardin Airport (MQM), then travel into the old city",
+        "language": "Turkish, Kurdish, Arabic and other local languages",
+        "currency": "Turkish Lira (TRY)"
+      },
+      "photo": {
+        "file": "Old town, Mardin, Turkey.jpg",
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_town%2C_Mardin%2C_Turkey.jpg?width=1280",
+        "author": "Senol Demir from Turkey",
+        "licence": "CC BY 2.0"
+      },
+      "experiences": [
+        {
+          "id": "mardin-old-city",
+          "title": "Walk the old city",
+          "category": "culture",
+          "duration": "2–3 hours",
+          "description": "Explore narrow streets, historic stone buildings, courtyards and terraces.",
+          "photo": {
+            "file": "View from Mardin to the Mesopotamian plains.jpg",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_from_Mardin_to_the_Mesopotamian_plains.jpg?width=1280",
+            "author": "Florian Koch",
+            "licence": "CC BY-SA 2.0"
+          }
+        },
+        {
+          "id": "mardin-architecture",
+          "title": "Discover historic architecture",
+          "category": "culture",
+          "duration": "2–3 hours",
+          "description": "Visit historic landmarks such as Zinciriye Medrese.",
+          "photo": {
+            "file": "Mardin on roof of Sultan Isa Medresesi 2446.jpg",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mardin_on_roof_of_Sultan_Isa_Medresesi_2446.jpg?width=1280",
+            "author": "Dosseman",
+            "licence": "CC BY-SA 4.0"
+          }
+        },
+        {
+          "id": "mardin-food",
+          "title": "Explore Mardin's culinary traditions",
+          "category": "food",
+          "duration": "2–3 hours",
+          "description": "Discover regional dishes such as kaburga dolması (stuffed lamb ribs) and traditional sweets.",
+          "photo": {
+            "file": "Syrian Fatteh sold in Mardin, Turkey.jpg",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Syrian_Fatteh_sold_in_Mardin%2C_Turkey.jpg?width=1280",
+            "author": "Oystercard",
+            "licence": "CC BY-SA 4.0"
+          }
+        }
+      ],
+      "sortOrder": 8
+    },
+    {
+      "id": "monsaraz",
+      "name": "Monsaraz",
+      "country": "Portugal",
+      "region": "Alentejo",
+      "continent": "Europe",
+      "location": {
+        "lat": 38.443,
+        "lng": -7.381
+      },
+      "categories": [
+        "culture",
+        "food"
+      ],
+      "collections": [
+        "hidden-villages"
+      ],
+      "featured": false,
+      "shortDescription": "A whitewashed hilltop village overlooking vineyards, olive groves and the expansive Alqueva reservoir.",
+      "overview": "Monsaraz is a medieval hilltop settlement in Portugal's Alentejo region, known for whitewashed houses, historic walls and panoramic views. It overlooks the Alqueva reservoir, part of the Dark Sky Alqueva reserve, one of Europe's best-known stargazing areas.",
+      "whyHiddenGem": "Its quiet streets, traditional architecture and rural Alentejo atmosphere offer a slower experience of Portugal than busier towns such as Sintra or Óbidos.",
+      "travelInfo": {
+        "bestTime": "March–June and September–October",
+        "gettingThere": "Drive from Évora or use regional transport to nearby towns and continue by road",
+        "language": "Portuguese",
+        "currency": "Euro (EUR)"
+      },
+      "photo": {
+        "file": "Monsaraz January 2020-1.jpg",
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Monsaraz_January_2020-1.jpg?width=1280",
+        "author": "Alvesgaspar",
+        "licence": "CC BY-SA 4.0"
+      },
+      "experiences": [
+        {
+          "id": "medieval-village",
+          "title": "Walk the medieval village",
+          "category": "culture",
+          "duration": "1–2 hours",
+          "description": "Explore historic streets, castle area and whitewashed buildings.",
+          "photo": {
+            "file": "Monsaraz January 2020-3.jpg",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Monsaraz_January_2020-3.jpg?width=1280",
+            "author": "Alvesgaspar",
+            "licence": "CC BY-SA 4.0"
+          }
+        },
+        {
+          "id": "stargazing-alqueva",
+          "title": "Stargazing over Alqueva",
+          "category": "nature",
+          "duration": "Evening",
+          "description": "Watch the night sky over the Alqueva reservoir, part of the Dark Sky Alqueva reserve, with guided stargazing sessions available locally.",
+          "photo": {
+            "file": "Alqueva (3776707754).jpg",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alqueva_%283776707754%29.jpg?width=1280",
+            "author": "Francisco Restivo from Porto, Portugal",
+            "licence": "CC BY 2.0"
+          }
+        },
+        {
+          "id": "alentejo-wine",
+          "title": "Taste Alentejo wine and cuisine",
+          "category": "food",
+          "duration": "2–3 hours",
+          "description": "Discover local wine, olive oil and traditional Alentejo dishes.",
+          "photo": {
+            "file": "Açorda à Alentejana edited.jpg",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A%C3%A7orda_%C3%A0_Alentejana_edited.jpg?width=1280",
+            "author": "Filipe Fortes",
+            "licence": "CC BY-SA 2.0"
+          }
+        }
+      ],
+      "sortOrder": 9
+    },
+    {
+      "id": "shaxi",
+      "name": "Shaxi",
+      "country": "China",
+      "region": "Jianchuan County, Yunnan",
+      "continent": "Asia",
+      "location": {
+        "lat": 26.316,
+        "lng": 99.855
+      },
+      "categories": [
+        "culture",
+        "food"
+      ],
+      "collections": [
+        "cultural-heritage"
+      ],
+      "featured": false,
+      "shortDescription": "A preserved historic market town where ancient trading routes, traditional courtyards and village life remain visible.",
+      "overview": "Shaxi is a historic town in Yunnan that once played an important role along regional trade routes associated with the Tea Horse Road. Its old market square and traditional architecture provide a window into regional history.",
+      "whyHiddenGem": "Shaxi offers a slower alternative to China's popular historic destinations, with a preserved townscape and rural community connections.",
+      "travelInfo": {
+        "bestTime": "March–May and September–November",
+        "gettingThere": "Travel via Dali or Jianchuan and continue by road",
+        "language": "Mandarin, Bai",
+        "currency": "Chinese Yuan (CNY)"
+      },
+      "photo": {
+        "file": "Shaxi, Yunnan, China.jpg",
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shaxi%2C_Yunnan%2C_China.jpg?width=1280",
+        "author": "Matthieu Lelievre",
+        "licence": "CC BY-SA 2.0"
+      },
+      "experiences": [
+        {
+          "id": "sideng-square",
+          "title": "Explore Sideng market square",
+          "category": "culture",
+          "duration": "1–2 hours",
+          "description": "Explore the historic market square and traditional buildings.",
+          "photo": {
+            "file": "Old Theatre Inn in Shaxi, Nachtansicht.jpg",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_Theatre_Inn_in_Shaxi%2C_Nachtansicht.jpg?width=1280",
+            "author": "Rod Waddington",
+            "licence": "CC BY-SA 2.0"
+          }
+        },
+        {
+          "id": "shaxi-lanes",
+          "title": "Walk the old village lanes",
+          "category": "culture",
+          "duration": "2–3 hours",
+          "description": "Wander through traditional lanes and courtyards.",
+          "photo": {
+            "file": "Shaxi Old Town Entrance (52372866676).jpg",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shaxi_Old_Town_Entrance_%2852372866676%29.jpg?width=1280",
+            "author": "Rod Waddington from Kergunyah, Australia",
+            "licence": "CC BY-SA 2.0"
+          }
+        },
+        {
+          "id": "shaxi-food",
+          "title": "Taste Shaxi's local food",
+          "category": "food",
+          "duration": "1–2 hours",
+          "description": "Discover local Bai dishes such as rushan (grilled milk-fan cheese) at small restaurants and market stalls.",
+          "photo": {
+            "file": "Dali Rushan.jpg",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dali_Rushan.jpg?width=1280",
+            "author": "rduta",
+            "licence": "CC BY 2.0"
+          }
+        }
+      ],
+      "sortOrder": 10
+    },
+    {
+      "id": "fogo",
+      "name": "Fogo",
+      "country": "Cape Verde",
+      "region": "Fogo Island",
+      "continent": "Africa",
+      "location": {
+        "lat": 14.95,
+        "lng": -24.35
+      },
+      "categories": [
+        "culture",
+        "food"
+      ],
+      "collections": [
+        "remote-escapes"
+      ],
+      "featured": false,
+      "shortDescription": "A volcanic island where dramatic crater landscapes, black lava fields, vineyards and traditional communities coexist.",
+      "overview": "Fogo is a volcanic island in Cape Verde dominated by Pico do Fogo. Chã das Caldeiras sits within the volcanic landscape, where residents grow crops and produce distinctive local wine and coffee.",
+      "whyHiddenGem": "Its volcanic agriculture, isolated communities and strong local identity make Fogo exceptional for landscape and food culture.",
+      "travelInfo": {
+        "bestTime": "November–June",
+        "gettingThere": "Fly to São Filipe Airport (SFL), then travel by road to Chã das Caldeiras",
+        "language": "Portuguese and Cape Verdean Creole",
+        "currency": "Cape Verdean Escudo (CVE)"
+      },
+      "photo": {
+        "file": "Cape Verde Pico do Fogo wide.jpg",
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cape_Verde_Pico_do_Fogo_wide.jpg?width=1280",
+        "author": "Cayambe",
+        "licence": "CC BY-SA 3.0"
+      },
+      "experiences": [
+        {
+          "id": "pico-do-fogo",
+          "title": "Climb Pico do Fogo",
+          "category": "adventure",
+          "duration": "6–8 hours",
+          "description": "Take a guided hike towards the volcanic summit and experience crater views.",
+          "photo": {
+            "file": "Mount fogo.jpg",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mount_fogo.jpg?width=1280",
+            "author": "David Trainer",
+            "licence": "CC BY-SA 3.0"
+          }
+        },
+        {
+          "id": "cha-das-caldeiras",
+          "title": "Explore Chã das Caldeiras",
+          "category": "culture",
+          "duration": "2–3 hours",
+          "description": "Explore the settlement inside the volcanic caldera and its community.",
+          "photo": {
+            "file": "Cape Verde Fogo Chã das Caldeiras school.jpg",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cape_Verde_Fogo_Ch%C3%A3_das_Caldeiras_school.jpg?width=1280",
+            "author": "Cayambe",
+            "licence": "CC BY-SA 3.0 LU"
+          }
+        },
+        {
+          "id": "fogo-wine-coffee",
+          "title": "Taste volcanic wine and coffee",
+          "category": "food",
+          "duration": "2–3 hours",
+          "description": "Discover local vineyards, volcanic-grown produce and regional coffee.",
+          "photo": {
+            "file": "Vignes et Pico do Fogo à Chã das Caldeiras.jpg",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vignes_et_Pico_do_Fogo_%C3%A0_Ch%C3%A3_das_Caldeiras.jpg?width=1280",
+            "author": "F H Mira",
+            "licence": "CC BY-SA 2.0"
+          }
+        }
+      ],
+      "sortOrder": 11
+    },
+    {
+      "id": "jinan",
+      "name": "Jinan",
+      "country": "China",
+      "region": "Shandong Province",
+      "continent": "Asia",
+      "location": {
+        "lat": 36.6512,
+        "lng": 117.1201
+      },
+      "categories": [
+        "culture",
+        "food"
+      ],
+      "collections": [
+        "local-food"
+      ],
+      "featured": false,
+      "shortDescription": "China's City of Springs, where historic spring pools, lakeside paths, old streets and Shandong cuisine define the city.",
+      "overview": "Jinan, the capital of Shandong Province, is known for its spring-water landscape. Baotu Spring, Black Tiger Spring and Daming Lake are among its best-known landmarks, while traditional streets and local food add to its cultural character.",
+      "whyHiddenGem": "Jinan combines spring-fed parks, historic lanes and regional cuisine in a city that can be explored at a relaxed pace, with a distinct local identity beyond China's better-known travel hubs.",
+      "travelInfo": {
+        "bestTime": "April–May and September–November",
+        "gettingThere": "Fly into Jinan Yaoqiang International Airport or travel by high-speed rail; city transit links major sights",
+        "language": "Mandarin Chinese",
+        "currency": "Chinese Yuan (CNY)"
+      },
+      "photo": {
+        "file": "Jinan Baotu Spring-20150519-RM-165055.jpg",
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jinan_Baotu_Spring-20150519-RM-165055.jpg?width=1280",
+        "author": "Ermell",
+        "licence": "CC BY-SA 4.0"
+      },
+      "experiences": [
+        {
+          "id": "baotu-spring",
+          "title": "Visit Baotu Spring and the spring parks",
+          "category": "culture",
+          "duration": "2–3 hours",
+          "description": "Explore Baotu Spring Park, Wulongtan and nearby spring-water sites to experience the city's defining landscape and traditional gardens.",
+          "photo": {
+            "file": "Jinan Baotu Spring roof-20150519-RM-165354.jpg",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jinan_Baotu_Spring_roof-20150519-RM-165354.jpg?width=1280",
+            "author": "Ermell",
+            "licence": "CC BY-SA 4.0"
+          }
+        },
+        {
+          "id": "qushuiting-daming",
+          "title": "Walk Qushuiting Street and Daming Lake",
+          "category": "culture",
+          "duration": "2–3 hours",
+          "description": "Explore old-city lanes, spring-fed waterways and Daming Lake, with time to enjoy the historic neighbourhood atmosphere.",
+          "photo": {
+            "file": "Lixia Pavillion, Daming Lake, Jinan in October 2019.jpg",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lixia_Pavillion%2C_Daming_Lake%2C_Jinan_in_October_2019.jpg?width=1280",
+            "author": "HMGiovanniV",
+            "licence": "CC BY-SA 4.0"
+          }
+        },
+        {
+          "id": "shandong-cuisine",
+          "title": "Taste Jinan and Shandong cuisine",
+          "category": "food",
+          "duration": "2–3 hours",
+          "description": "Discover regional specialties such as youxuan pastries, tianmo savoury porridge and traditional Shandong dishes.",
+          "photo": {
+            "file": "Shandong-Style Braised Prawns.jpg",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shandong-Style_Braised_Prawns.jpg?width=1280",
+            "author": "Zheng Zhou",
+            "licence": "CC BY-SA 4.0"
+          }
+        }
+      ],
+      "sortOrder": 12
+    }
+  ]
+}
