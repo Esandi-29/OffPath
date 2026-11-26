@@ -1,0 +1,40 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(uid) {
+      return signedIn() && request.auth.uid == uid;
+    }
+
+    // The admin account that seeds the curated content.
+    function isAdmin() {
+      return signedIn() && request.auth.uid == 'FgWyArCPkrhc9RuNCJ2HCbdgSsh1';
+    }
+
+    // Curated content: readable by any signed-in user, writable only by the admin.
+    match /destinations/{destinationId} {
+      allow read: if signedIn();
+      allow write: if isAdmin();
+
+      match /{subcollection=**} {
+        allow read: if signedIn();
+        allow write: if isAdmin();
+      }
+    }
+
+    // Each user's own data: profile, and later trips, saved items, suggestions.
+    match /users/{uid} {
+      allow read, write: if isOwner(uid);
+
+      match /{subcollection=**} {
+        allow read, write: if isOwner(uid);
+      }
+    }
+
+    // Anything else is denied by default.
+  }
+}
