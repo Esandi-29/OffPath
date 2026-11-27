@@ -12,6 +12,7 @@ import '../../features/discover/discover_screen.dart';
 import '../../features/explore/explore_screen.dart';
 import '../../features/profile/profile_screen.dart';
 import '../../features/saved/saved_screen.dart';
+import '../../features/trips/my_trips_screen.dart';
 import 'app_shell.dart';
 
 final _rootNavigatorKey = GlobalKey<NavigatorState>();
@@ -101,6 +102,13 @@ final routerProvider = Provider<GoRouter>((ref) {
         builder: (context, state) => DestinationDetailsScreen(
           destinationId: state.pathParameters['id']!,
         ),
+      ),
+
+      // My trips, opened from Profile (also full-screen).
+      GoRoute(
+        path: '/trips',
+        parentNavigatorKey: _rootNavigatorKey,
+        builder: (context, state) => const MyTripsScreen(),
       ),
     ],
   );
