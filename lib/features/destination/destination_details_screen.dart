@@ -65,6 +65,7 @@ class _DetailsView extends StatelessWidget {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
+        bottomNavigationBar: _AddToTripBar(destinationId: destination.id),
         body: NestedScrollView(
           headerSliverBuilder: (context, innerBoxIsScrolled) => [
             // Tells the tabs how much of them the pinned header covers.
@@ -497,6 +498,35 @@ class _ExperienceCard extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+/// Fixed bar at the bottom of Details: plan a trip to this destination.
+class _AddToTripBar extends StatelessWidget {
+  const _AddToTripBar({required this.destinationId});
+
+  final String destinationId;
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: Theme.of(context).colorScheme.surface,
+      child: SafeArea(
+        top: false,
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(16, 12, 16, 12),
+          child: SizedBox(
+            width: double.infinity,
+            child: FilledButton.icon(
+              onPressed: () =>
+                  context.push('/trips/new?destination=$destinationId'),
+              icon: const Icon(Icons.edit_calendar_outlined),
+              label: const Text('Add to trip'),
+            ),
+          ),
+        ),
       ),
     );
   }
