@@ -11,3 +11,12 @@ Issues found and notable decisions, with fixes. Used for the report's "Issues/er
 | DL-05 | 25 Nov 2026 | Design | Colour roles: palette colours used as fills with dark text | Yellows, greens, limes and blues fail WCAG contrast as text on white | Category colours are fills behind dark text (#111114, ≥ 5:1); purple #6255D2 is the light primary (5.6:1 with white), #8587F8 the dark primary (6.8:1 with black) |
 | DL-06 | 25 Nov 2026 | Security | GitHub secret scanning flagged two "Google API Keys" (lib/firebase_options.dart, ios/Runner/GoogleService-Info.plist) | The scanner detects any string shaped like a Google API key. These are Firebase client configuration keys, which identify the project and are shipped inside every app build; they are not secrets | Alerts closed as false positives. Data is protected by Firestore security rules (task 2.4) and Firebase Authentication, not by hiding the key. Optional hardening: restrict the key to the Android app in Google Cloud Console |
 | DL-07 | 26 Nov 2026 | Firebase | users/{uid} profile document was not created after adding Firestore to the auth repository | Hot reload kept the old repository object in memory (Riverpod providers are created once), and profiles are only created at sign-in/registration | Full restart, then log out and back in; profile created. Lesson: constructor or provider changes need a full restart, not hot reload |
+## DL-08 — Re-seeding kept uploading the old photos (27 Nov)
+
+**Problem:** After replacing 5 destination photos in `destinations.json`, tapping "Seed destinations" still uploaded the old photo credits. Firestore's `updatedAt` showed the seed had run (19:34), but `narangala` still had the old Wikimedia photo. A full Stop + Run and then `flutter clean` did not fix it.
+
+**Cause:** The file on disk had never changed. The editor appeared to show the new content, but `grep -n "Asanka" assets/data/destinations.json` found the old author, and `git status` showed no modified files. Flutter packs assets from the file on disk at build time, so the app kept seeding the old data.
+
+**Fix:** Copied the downloaded file over the project file with `cp ~/Downloads/destinations.json assets/data/destinations.json`. Confirmed with `grep` (new author on line 226) and `git status` (file shown as modified), then Stop + Run and re-seeded. Firestore then showed the new photo.
+
+**Lesson:** Before testing a change to an asset file, confirm it reached the disk: `git status` should list the file as modified. Asset changes also need a full Stop + Run, not hot reload.
