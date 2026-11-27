@@ -1,4 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:offpath/core/utils/validators.dart';
 import 'package:offpath/data/models/trip.dart';
 import 'package:offpath/features/trips/trip_format.dart';
 
@@ -73,6 +74,35 @@ void main() {
       ];
       expect(tripSummary(trips, today), '1 upcoming · 1 happening now');
       expect(tripSummary(const [], today), 'Plan your first trip');
+    });
+  });
+
+  group('Trip form validators', () {
+    test('trip name is required and at most 40 characters', () {
+      expect(Validators.tripName('  '), 'Please enter a trip name.');
+      expect(Validators.tripName('a' * 41),
+          'Trip name must be 40 characters or fewer.');
+      expect(Validators.tripName('Hill escape'), isNull);
+    });
+
+    test('destination is required', () {
+      expect(Validators.tripDestination(null), 'Please choose a destination.');
+      expect(Validators.tripDestination('narangala'), isNull);
+    });
+
+    test('dates are required and the end cannot be before the start', () {
+      expect(Validators.tripDates(null, null), 'Choose your trip dates.');
+      expect(Validators.tripDates(DateTime(2027, 3, 18), DateTime(2027, 3, 12)),
+          "End date can't be before start date.");
+      expect(
+          Validators.tripDates(DateTime(2027, 3, 12), DateTime(2027, 3, 18)),
+          isNull);
+    });
+
+    test('notes are optional but at most 500 characters', () {
+      expect(Validators.tripNotes(''), isNull);
+      expect(Validators.tripNotes('a' * 501),
+          'Notes must be 500 characters or fewer.');
     });
   });
 }

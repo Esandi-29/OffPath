@@ -34,4 +34,29 @@ abstract final class Validators {
     if (value != original) return 'Passwords do not match.';
     return null;
   }
+
+  // ---- Trip form ----
+
+  static String? tripName(String? value) {
+    final v = value?.trim() ?? '';
+    if (v.isEmpty) return 'Please enter a trip name.';
+    if (v.length > 40) return 'Trip name must be 40 characters or fewer.';
+    return null;
+  }
+
+  static String? tripDestination(String? destinationId) =>
+      (destinationId == null || destinationId.isEmpty)
+          ? 'Please choose a destination.'
+          : null;
+
+  /// The date picker can't return an end before the start, so the second
+  /// check is a safety net (e.g. for bad data loaded from Firestore).
+  static String? tripDates(DateTime? start, DateTime? end) {
+    if (start == null || end == null) return 'Choose your trip dates.';
+    if (end.isBefore(start)) return "End date can't be before start date.";
+    return null;
+  }
+
+  static String? tripNotes(String? value) =>
+      (value ?? '').length > 500 ? 'Notes must be 500 characters or fewer.' : null;
 }
