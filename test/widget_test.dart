@@ -1,6 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:offpath/app.dart';
+import 'package:offpath/core/widgets/destination_card.dart';
 import 'package:offpath/data/models/app_user.dart';
 import 'package:offpath/data/models/destination.dart';
 import 'package:offpath/data/models/experience.dart';
@@ -49,15 +50,33 @@ const sampleDestination = Destination(
   collections: ['remote-escapes'],
   featured: true,
   shortDescription: '',
-  overview: '',
-  whyHiddenGem: '',
+  overview: 'A quiet mountain in the Uva hills.',
+  whyHiddenGem: 'Few visitors make it this far.',
   travelInfo: TravelInfo(
-      bestTime: '', gettingThere: '', language: '', currency: ''),
+      bestTime: 'February–September',
+      gettingThere: '',
+      language: '',
+      currency: ''),
   photo: Photo(
-      url: 'https://example.com/narangala.jpg', author: 'Test', licence: ''),
+      url: 'https://example.com/narangala.jpg',
+      author: 'Test',
+      licence: 'Unsplash License'),
 );
 
-/// Stands in for Firestore in tests: always returns [sampleDestination].
+const sampleExperience = Experience(
+  id: 'summit-sunrise',
+  title: 'Summit sunrise hike',
+  category: 'adventure',
+  duration: '3–5 hours',
+  description: 'Start before dawn to reach the top for sunrise.',
+  photo: Photo(
+      url: 'https://example.com/sunrise.jpg',
+      author: 'Tester',
+      licence: 'CC BY-SA 4.0'),
+);
+
+/// Stands in for Firestore in tests: always returns [sampleDestination]
+/// and its one [sampleExperience].
 class FakeDestinationRepository implements DestinationRepository {
   @override
   Stream<List<Destination>> watchAll() => Stream.value([sampleDestination]);
@@ -67,7 +86,7 @@ class FakeDestinationRepository implements DestinationRepository {
 
   @override
   Stream<List<Experience>> watchExperiences(String destinationId) =>
-      Stream.value(const []);
+      Stream.value(const [sampleExperience]);
 }
 
 Future<void> pumpApp(WidgetTester tester, AppUser? user) async {
@@ -117,5 +136,28 @@ void main() {
         await tester.enterText(find.byType(TextField), 'zzz');
         await tester.pumpAndSettle();
         expect(find.text('No matches'), findsOneWidget);
+      });
+
+  testWidgets('Tapping a destination opens its details and tabs',
+          (tester) async {
+        await pumpApp(
+          tester,
+          const AppUser(uid: 'test', email: 'test@offpath.app', displayName: 'Test'),
+        );
+
+        // Open the featured card on Discover.
+        await tester.tap(find.byType(DestinationCard).first);
+        await tester.pumpAndSettle();
+
+        // Overview tab: header credit and the hidden-gem card.
+        expect(find.text('Overview'), findsOneWidget);
+        expect(find.text('Photo: Test · Unsplash License'), findsOneWidget);
+        expect(find.text("Why it's a hidden gem"), findsOneWidget);
+
+        // Experiences tab: the experience and its photo credit.
+        await tester.tap(find.text('Experiences'));
+        await tester.pumpAndSettle();
+        expect(find.text('Summit sunrise hike'), findsOneWidget);
+        expect(find.text('Photo: Tester · CC BY-SA 4.0'), findsOneWidget);
       });
 }
