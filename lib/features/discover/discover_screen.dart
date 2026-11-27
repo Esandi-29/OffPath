@@ -9,6 +9,7 @@ import '../../core/widgets/section_header.dart';
 import '../../data/models/destination.dart';
 import '../auth/auth_providers.dart';
 import '../destination/destination_providers.dart';
+import '../../core/widgets/message_view.dart';
 
 /// Home screen: greeting, search entry, featured gems, collections and the
 /// full list filtered by category. Data comes live from Firestore.
@@ -63,7 +64,7 @@ class _DiscoverScreenState extends ConsumerState<DiscoverScreen> {
         // One widget per state: loading, error, or data.
         child: destinations.when(
           loading: () => const Center(child: CircularProgressIndicator()),
-          error: (error, stackTrace) => _MessageView(
+          error: (error, stackTrace) => MessageView(
             icon: Icons.cloud_off_outlined,
             title: "Couldn't load destinations",
             message: 'Check your connection and try again.',
@@ -72,7 +73,7 @@ class _DiscoverScreenState extends ConsumerState<DiscoverScreen> {
           ),
           data: (all) {
             if (all.isEmpty) {
-              return const _MessageView(
+              return const MessageView(
                 icon: Icons.travel_explore,
                 title: 'No destinations yet',
                 message: 'New hidden gems will appear here soon.',
@@ -245,52 +246,6 @@ class _SearchBar extends StatelessWidget {
               ),
             ],
           ),
-        ),
-      ),
-    );
-  }
-}
-
-/// Centered icon + message, used for the error and empty states.
-class _MessageView extends StatelessWidget {
-  const _MessageView({
-    required this.icon,
-    required this.title,
-    required this.message,
-    this.actionLabel,
-    this.onAction,
-  });
-
-  final IconData icon;
-  final String title;
-  final String message;
-  final String? actionLabel;
-  final VoidCallback? onAction;
-
-  @override
-  Widget build(BuildContext context) {
-    final scheme = Theme.of(context).colorScheme;
-    final text = Theme.of(context).textTheme;
-    return Center(
-      child: Padding(
-        padding: const EdgeInsets.all(32),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Icon(icon, size: 56, color: scheme.onSurfaceVariant),
-            const SizedBox(height: 16),
-            Text(title, style: text.titleLarge, textAlign: TextAlign.center),
-            const SizedBox(height: 8),
-            Text(
-              message,
-              textAlign: TextAlign.center,
-              style: text.bodyMedium?.copyWith(color: scheme.onSurfaceVariant),
-            ),
-            if (actionLabel != null) ...[
-              const SizedBox(height: 24),
-              OutlinedButton(onPressed: onAction, child: Text(actionLabel!)),
-            ],
-          ],
         ),
       ),
     );
