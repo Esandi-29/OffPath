@@ -13,6 +13,7 @@ import '../../features/explore/explore_screen.dart';
 import '../../features/profile/profile_screen.dart';
 import '../../features/saved/saved_screen.dart';
 import '../../features/trips/my_trips_screen.dart';
+import '../../features/trips/trip_form_screen.dart';
 import 'app_shell.dart';
 
 final _rootNavigatorKey = GlobalKey<NavigatorState>();
@@ -109,6 +110,24 @@ final routerProvider = Provider<GoRouter>((ref) {
         path: '/trips',
         parentNavigatorKey: _rootNavigatorKey,
         builder: (context, state) => const MyTripsScreen(),
+      ),
+
+      // New trip. "Add to trip" on Details adds ?destination=<id>.
+      GoRoute(
+        path: '/trips/new',
+        parentNavigatorKey: _rootNavigatorKey,
+        builder: (context, state) => TripFormScreen(
+          initialDestinationId: state.uri.queryParameters['destination'],
+        ),
+      ),
+
+      // Edit an existing trip.
+      GoRoute(
+        path: '/trips/:id/edit',
+        parentNavigatorKey: _rootNavigatorKey,
+        builder: (context, state) => TripFormScreen(
+          tripId: state.pathParameters['id']!,
+        ),
       ),
     ],
   );

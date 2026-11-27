@@ -1,4 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:material_ui/material_ui.dart';
 
 import '../../core/theme/offpath_colors.dart';
@@ -6,6 +7,7 @@ import '../../core/widgets/message_view.dart';
 import '../../core/widgets/network_photo.dart';
 import '../../core/widgets/section_header.dart';
 import '../../data/models/trip.dart';
+import '../auth/auth_providers.dart';
 import 'trip_format.dart';
 import 'trip_providers.dart';
 
@@ -14,12 +16,7 @@ import 'trip_providers.dart';
 class MyTripsScreen extends ConsumerWidget {
   const MyTripsScreen({super.key});
 
-  void _newTrip(BuildContext context) {
-    // The trip form arrives in 3.1b.
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('The trip form is coming in 3.1b')),
-    );
-  }
+  void _newTrip(BuildContext context) => context.push('/trips/new');
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -139,6 +136,11 @@ class _UpcomingTripCard extends StatelessWidget {
                     label: formatCountdown(trip.daysUntilStart(today)),
                   ),
                 ),
+                Positioned(
+                  top: 6,
+                  right: 6,
+                  child: _TripMenu(trip: trip, onPhoto: true),
+                ),
               ],
             ),
           ),
@@ -215,8 +217,95 @@ class _PastTripCard extends StatelessWidget {
               ],
             ),
           ),
+          _TripMenu(trip: trip),
         ],
       ),
+    );
+  }
+}
+
+enum _TripAction { edit, delete }
+
+/// The ⋮ menu on a trip card: Edit, or Delete (with a confirmation).
+class _TripMenu extends ConsumerWidget {
+  const _TripMenu({required this.trip, this.onPhoto = false});
+
+  final Trip trip;
+  final bool onPhoto; // white circle so it shows on top of the photo
+
+  Future<void> _confirmDelete(BuildContext context, WidgetRef ref) async {
+    final messenger = ScaffoldMessenger.of(context);
+    final delete = await showDialog<bool>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Delete this trip?'),
+        content: Text('"${trip.title}" will be removed from My trips. '
+            "This can't be undone."),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context, false),
+            child: const Text('Cancel'),
+          ),
+          TextButton(
+            style: TextButton.styleFrom(
+              foregroundColor: Theme.of(context).colorScheme.error,
+            ),
+            onPressed: () => Navigator.pop(context, true),
+            child: const Text('Delete'),
+          ),
+        ],
+      ),
+    );
+    if (delete != true) return; // cancelled, or tapped outside the dialog
+
+    final uid = ref.read(authStateProvider).value?.uid;
+    if (uid == null) return;
+    ref.read(tripRepositoryProvider).deleteTrip(uid, trip.id);
+    messenger.showSnackBar(
+      SnackBar(content: Text('"${trip.title}" deleted')),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final scheme = Theme.of(context).colorScheme;
+    return PopupMenuButton<_TripAction>(
+      tooltip: 'Trip options',
+      icon: Icon(
+        Icons.more_vert,
+        color: onPhoto ? Colors.black87 : scheme.onSurfaceVariant,
+      ),
+      style: onPhoto
+          ? IconButton.styleFrom(
+        backgroundColor: Colors.white.withValues(alpha: 0.9),
+      )
+          : null,
+      onSelected: (action) {
+        switch (action) {
+          case _TripAction.edit:
+            context.push('/trips/${trip.id}/edit');
+          case _TripAction.delete:
+            _confirmDelete(context, ref);
+        }
+      },
+      itemBuilder: (context) => const [
+        PopupMenuItem(
+          value: _TripAction.edit,
+          child: ListTile(
+            leading: Icon(Icons.edit_outlined),
+            title: Text('Edit'),
+            contentPadding: EdgeInsets.zero,
+          ),
+        ),
+        PopupMenuItem(
+          value: _TripAction.delete,
+          child: ListTile(
+            leading: Icon(Icons.delete_outline),
+            title: Text('Delete'),
+            contentPadding: EdgeInsets.zero,
+          ),
+        ),
+      ],
     );
   }
 }
