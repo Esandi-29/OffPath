@@ -69,10 +69,10 @@
         "currency": "Brazilian Real (BRL)"
       },
       "photo": {
-        "file": "Lençóis Maranhenses 2018.jpg",
-        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Len%C3%A7%C3%B3is_Maranhenses_2018.jpg?width=1280",
-        "author": "Julius Dadalti",
-        "licence": "CC BY-SA 4.0"
+        "file": "https://www.pexels.com/photo/27688578/",
+        "url": "https://images.pexels.com/photos/27688578/pexels-photo-27688578.jpeg?auto=compress&cs=tinysrgb&w=1280",
+        "author": "Renato Nascimento",
+        "licence": "Pexels License"
       },
       "experiences": [
         {
@@ -145,10 +145,10 @@
         "currency": "Euro (EUR)"
       },
       "photo": {
-        "file": "Bohinjsko jezero 2.jpg",
-        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bohinjsko_jezero_2.jpg?width=1280",
-        "author": "Smihael",
-        "licence": "CC BY-SA 3.0"
+        "file": "https://www.pexels.com/photo/7743197/",
+        "url": "https://images.pexels.com/photos/7743197/pexels-photo-7743197.jpeg?auto=compress&cs=tinysrgb&w=1280",
+        "author": "Gizem Ş.",
+        "licence": "Pexels License"
       },
       "experiences": [
         {
@@ -221,10 +221,10 @@
         "currency": "Sri Lankan Rupee (LKR)"
       },
       "photo": {
-        "file": "Hikers in Narangala Sri Lanka.jpg",
-        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hikers_in_Narangala_Sri_Lanka.jpg?width=1280",
-        "author": "Ahamed rasheed",
-        "licence": "CC BY-SA 4.0"
+        "file": "https://unsplash.com/photos/wxx6SA2FcA4",
+        "url": "https://images.unsplash.com/photo-1588950642834-72354b5e95d4?w=1280&q=80&auto=format&fit=crop",
+        "author": "Asanka Rathnayake",
+        "licence": "Unsplash License"
       },
       "experiences": [
         {
@@ -449,10 +449,10 @@
         "currency": "Malagasy Ariary (MGA)"
       },
       "photo": {
-        "file": "Tsingy de Bemaraha Strict Nature Reserve.jpg",
-        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tsingy_de_Bemaraha_Strict_Nature_Reserve.jpg?width=1280",
-        "author": "ASMaloney at English Wikipedia",
-        "licence": "Public domain"
+        "file": "https://unsplash.com/photos/4z3Rl7U8Pxk",
+        "url": "https://images.unsplash.com/photo-1781428269291-e4b90f17e6dd?w=1280&q=80&auto=format&fit=crop",
+        "author": "Rafael Peier",
+        "licence": "Unsplash License"
       },
       "experiences": [
         {
@@ -601,10 +601,10 @@
         "currency": "Turkish Lira (TRY)"
       },
       "photo": {
-        "file": "Old town, Mardin, Turkey.jpg",
-        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_town%2C_Mardin%2C_Turkey.jpg?width=1280",
-        "author": "Senol Demir from Turkey",
-        "licence": "CC BY 2.0"
+        "file": "https://www.pexels.com/photo/35301188/",
+        "url": "https://images.pexels.com/photos/35301188/pexels-photo-35301188.jpeg?auto=compress&cs=tinysrgb&w=1280",
+        "author": "Ayşegül Aytören",
+        "licence": "Pexels License"
       },
       "experiences": [
         {
