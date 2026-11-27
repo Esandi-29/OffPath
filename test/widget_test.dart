@@ -9,6 +9,7 @@ import 'package:offpath/data/repositories/auth_repository.dart';
 import 'package:offpath/data/repositories/destination_repository.dart';
 import 'package:offpath/features/auth/auth_providers.dart';
 import 'package:offpath/features/destination/destination_providers.dart';
+import 'package:material_ui/material_ui.dart';
 
 /// Stands in for Firebase Auth in tests: always signed in as [user] (or signed out).
 class FakeAuthRepository implements AuthRepository {
@@ -105,6 +106,16 @@ void main() {
 
         await tester.tap(find.text('Explore'));
         await tester.pumpAndSettle();
-        expect(find.text('Search and filters coming in 2.6'), findsOneWidget);
+        expect(find.text('Explore'), findsWidgets); // app bar + tab label
+
+        // Searching by country finds the destination…
+        await tester.enterText(find.byType(TextField), 'sri lanka');
+        await tester.pumpAndSettle();
+        expect(find.text('1 destination'), findsOneWidget);
+
+        // …and a search with no matches shows the empty state.
+        await tester.enterText(find.byType(TextField), 'zzz');
+        await tester.pumpAndSettle();
+        expect(find.text('No matches'), findsOneWidget);
       });
 }
