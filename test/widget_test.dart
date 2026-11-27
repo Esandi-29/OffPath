@@ -6,10 +6,13 @@ import 'package:offpath/data/models/app_user.dart';
 import 'package:offpath/data/models/destination.dart';
 import 'package:offpath/data/models/experience.dart';
 import 'package:offpath/data/models/photo.dart';
+import 'package:offpath/data/models/trip.dart';
 import 'package:offpath/data/repositories/auth_repository.dart';
 import 'package:offpath/data/repositories/destination_repository.dart';
+import 'package:offpath/data/repositories/trip_repository.dart';
 import 'package:offpath/features/auth/auth_providers.dart';
 import 'package:offpath/features/destination/destination_providers.dart';
+import 'package:offpath/features/trips/trip_providers.dart';
 import 'package:material_ui/material_ui.dart';
 
 /// Stands in for Firebase Auth in tests: always signed in as [user] (or signed out).
@@ -89,6 +92,39 @@ class FakeDestinationRepository implements DestinationRepository {
       Stream.value(const [sampleExperience]);
 }
 
+/// A trip 10 days from now, so it always shows under Upcoming.
+final sampleTrip = Trip(
+  id: 'hill-escape',
+  title: 'Hill escape',
+  destinationId: 'narangala',
+  destinationName: 'Narangala',
+  country: 'Sri Lanka',
+  photoUrl: 'https://example.com/narangala.jpg',
+  startDate: DateUtils.dateOnly(DateTime.now()).add(const Duration(days: 10)),
+  endDate: DateUtils.dateOnly(DateTime.now()).add(const Duration(days: 16)),
+);
+
+/// Stands in for Firestore trips in tests: keeps them in a list.
+class FakeTripRepository implements TripRepository {
+  final trips = <Trip>[sampleTrip];
+
+  @override
+  Stream<List<Trip>> watchTrips(String uid) => Stream.value(trips);
+
+  @override
+  String addTrip(String uid, Trip trip) {
+    trips.add(trip);
+    return 'new-trip';
+  }
+
+  @override
+  void updateTrip(String uid, Trip trip) {}
+
+  @override
+  void deleteTrip(String uid, String tripId) =>
+      trips.removeWhere((trip) => trip.id == tripId);
+}
+
 Future<void> pumpApp(WidgetTester tester, AppUser? user) async {
   await tester.pumpWidget(
     ProviderScope(
@@ -96,6 +132,7 @@ Future<void> pumpApp(WidgetTester tester, AppUser? user) async {
         authRepositoryProvider.overrideWithValue(FakeAuthRepository(user)),
         destinationRepositoryProvider
             .overrideWithValue(FakeDestinationRepository()),
+        tripRepositoryProvider.overrideWithValue(FakeTripRepository()),
       ],
       child: const OffPathApp(),
     ),
@@ -159,5 +196,48 @@ void main() {
         await tester.pumpAndSettle();
         expect(find.text('Summit sunrise hike'), findsOneWidget);
         expect(find.text('Photo: Tester · CC BY-SA 4.0'), findsOneWidget);
+      });
+
+  testWidgets('My trips shows the signed-in user\'s trips', (tester) async {
+    await pumpApp(
+      tester,
+      const AppUser(uid: 'test', email: 'test@offpath.app', displayName: 'Test'),
+    );
+
+    // Profile tab → My trips.
+    await tester.tap(find.text('Profile'));
+    await tester.pumpAndSettle();
+    expect(find.text('1 upcoming'), findsOneWidget); // row subtitle
+    await tester.tap(find.text('My trips'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('Upcoming'), findsOneWidget);
+    expect(find.text('Hill escape'), findsOneWidget);
+    expect(find.text('New trip'), findsOneWidget); // the floating button
+  });
+
+  testWidgets('Add to trip opens the form and checks required fields',
+          (tester) async {
+        await pumpApp(
+          tester,
+          const AppUser(uid: 'test', email: 'test@offpath.app', displayName: 'Test'),
+        );
+
+        // Destination Details → Add to trip.
+        await tester.tap(find.byType(DestinationCard).first);
+        await tester.pumpAndSettle();
+        await tester.tap(find.text('Add to trip'));
+        await tester.pumpAndSettle();
+
+        // The form opens with the destination already chosen.
+        expect(find.text('New trip'), findsOneWidget);
+        expect(find.text('Narangala, Sri Lanka'), findsWidgets);
+
+        // Saving with no name or dates shows both errors and stays open.
+        await tester.tap(find.text('Save trip'));
+        await tester.pumpAndSettle();
+        expect(find.text('Please enter a trip name.'), findsOneWidget);
+        expect(find.text('Choose your trip dates.'), findsOneWidget);
+        expect(find.text('New trip'), findsOneWidget);
       });
 }
